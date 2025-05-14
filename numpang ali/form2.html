@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Netflix Sign Up</title>
+  <link rel="stylesheet" href="form2.css" />
+</head>
+<body>
+
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix Logo">
+  </header>
+
+  <div class="form-container">
+    <p>STEP 1 OF 3</p>
+    <h2>Create a password to start your membership</h2>
+    <p>Just a few more steps and you're done! We hate paperwork, too.</p>
+
+    <form id="signupForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <div id="emailError" class="error">Email is required.</div>
+
+      <input type="password" id="password" placeholder="Add a password" />
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="offers" />
+        <label for="offers">Please do not email me Netflix special offers.</label>
+      </div>
+
+      <button class="btn" type="submit">Next</button>
+    </form>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <p>Questions? Call 007-803-321-8275</p>
+      <div class="footer-links">
+        <a href="#">FAQ</a>
+        <a href="#">Help Center</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy</a>
+        <a href="#">Cookie Preferences</a>
+        <a href="#">Corporate Information</a>
+      </div>
+      <div class="language-select">
+        <select>
+          <option value="en">English</option>
+          <option value="id">Bahasa Indonesia</option>
+        </select>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('signupForm');
+    const email = document.getElementById('email');
+    const emailError = document.getElementById('emailError');
+
+    form.addEventListener('submit', function(e) {
+      if (!email.value) {
+        e.preventDefault();
+        emailError.style.display = 'block';
+      } else {
+        emailError.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>

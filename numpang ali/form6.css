@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e50914;
+  }
+  
+  .sign-out {
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .payment-container {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  
+  .icon {
+    font-size: 2.5rem;
+    color: #e50914;
+    margin-bottom: 1rem;
+  }
+  
+  .step {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .bold {
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  .payment-methods {
+    margin-top: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .method {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+  
+  .method .icons img {
+    height: 20px;
+    margin-left: 0.5rem;
+  }
+  
+  .arrow {
+    font-size: 1.2rem;
+    color: #999;
+  }
+  
+  footer {
+    background-color: #f3f3f3;
+    padding: 2rem;
+    font-size: 0.85rem;
+  }
+  
+  .footer-top {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .footer-links a {
+    color: #666;
+    text-decoration: none;
+  }
+  
