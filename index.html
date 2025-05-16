@@ -213,5 +213,28 @@
     <p class="text-xs text-[#737373]">© 2025 IFlix, Inc.</p>
   </footer>
 </body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAtwpul5awODhx5eV_Kj9SjFzQsG3UKEP0",
+    authDomain: "netflixkw-fecee.firebaseapp.com",
+    projectId: "netflixkw-fecee",
+    storageBucket: "netflixkw-fecee.firebasestorage.app",
+    messagingSenderId: "479461372014",
+    appId: "1:479461372014:web:a86b0b90fec2caca61767f",
+    measurementId: "G-V72H2X1EBN"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </html>
 </html>
