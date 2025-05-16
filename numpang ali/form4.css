@@ -1,28 +1,28 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #fff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #fff;
     color: #333;
   }
   
   header {
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 40px;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid #eee;
   }
   
-  .logo {
-    color: #e50914;
-    font-size: 32px;
-    font-weight: bold;
+   
+  header img {
+    height: 40px;
   }
   
   .sign-out {
-    font-size: 14px;
-    color: #000;
+    color: #333;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
   }
   
   main {

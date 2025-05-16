@@ -1,28 +1,29 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #fff;
     color: #333;
   }
   
   header {
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 2rem;
-    border-bottom: 1px solid #ddd;
+    align-items: center;
+    border-bottom: 1px solid #eee;
   }
   
-  .logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #e50914;
+   
+  header img {
+    height: 40px;
   }
   
   .sign-out {
     color: #333;
-    font-weight: 500;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
   }
-  
   .payment-container {
     text-align: center;
     padding: 3rem 1rem;

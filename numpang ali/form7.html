@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix - Set up GoPay</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid #e6e6e6;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    header a {
+      text-decoration: none;
+      color: #0071eb;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .step {
+      color: #333;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin: 10px 0 20px;
+    }
+
+    .select-wallet {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .select-wallet img {
+      width: 40px;
+      margin-right: 10px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .price-section {
+      padding: 15px;
+      background-color: #f7f7f7;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    .price-section span {
+      display: block;
+    }
+
+    .terms {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .checkbox-label input {
+      margin-right: 10px;
+    }
+
+    .start-button {
+      width: 100%;
+      padding: 15px;
+      background-color: #e50914;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .note {
+      font-size: 12px;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    footer {
+      padding: 20px;
+      background-color: #f7f7f7;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    footer a {
+      margin: 0 10px;
+      color: #0071eb;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo">
+    <a href="#">Sign Out</a>
+  </header>
+
+  <div class="container">
+    <div class="step">Step 3 of 3</div>
+    <h1>Set up GoPay</h1>
+
+    <div class="select-wallet">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/GoPay_logo.svg/2560px-GoPay_logo.svg.png" alt="GoPay Logo">
+      <span>GoPay</span>
+    </div>
+
+    <label>
+      <input type="text" placeholder="Mobile number">
+    </label>
+
+    <div class="price-section">
+      <span><strong>IDR 186,000/month</strong></span>
+      <span>Premium <a href="#" style="float: right; font-size: 12px;">Change</a></span>
+    </div>
+
+    <div class="terms">
+      By checking the checkbox below, you agree to our <a href="#">Terms of Use</a>, <a href="#">Privacy Statement</a>, and that you are over 18.<br>
+      Netflix will automatically continue your membership and charge the membership fee (currently IDR 186,000/month) to your payment method until you cancel.
+      You may cancel at any time to avoid future charges.
+    </div>
+
+    <label class="checkbox-label">
+      <input type="checkbox"> I agree.
+    </label>
+
+    <button class="start-button">Start Membership</button>
+
+    <div class="note">You’ll be sent to GoPay to complete payment.</div>
+  </div>
+
+  <footer>
+    Questions? Call 007-803-321-8275 (Toll-Free)<br>
+    <a href="#">FAQ</a>
+    <a href="#">Help Center</a>
+    <a href="#">Terms of Use</a>
+    <a href="#">Privacy</a>
+    <a href="#">Cookie Preferences</a>
+    <a href="#">Corporate Information</a>
+  </footer>
+</body>
+</html>

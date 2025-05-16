@@ -23,7 +23,7 @@ function getCurrentUser() {
 }
 
 function redirectIfNotLoggedIn() {
-    if (!getCurrentUser() && !window.location.pathname.includes('form.html') && !window.location.pathname.includes('form1.html')) {
+    if (!getCurrentUser() && !window.location.pathname.includes('form.html') && !window.location.pathname.includes('../numpang ali/form1.html')) {
         window.location.href = 'form.html';
     }
 }
@@ -95,7 +95,7 @@ function setupLoginPage() {
             if (user) {
                 localStorage.setItem('currentUser', JSON.stringify(user));
              
-                window.location.href = 'home.html';
+                window.location.href = '../index.html';
             } else {
              
                 document.getElementById('email').style.border = '1px solid red';
@@ -103,7 +103,7 @@ function setupLoginPage() {
             }
             if (user) {
                 localStorage.setItem('currentUser', JSON.stringify(user));
-                window.location.href = 'home.html';
+                window.location.href = '../index.html';
             } else {
                 document.getElementById('email').classList.add('error');
                 document.getElementById('password').classList.add('error');
@@ -169,11 +169,11 @@ window.logout = function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.pathname.includes('form1.html')) {
+    if (window.location.pathname.includes('../numpang ali/form1.html')) {
         setupRegisterPage();
     } else if (window.location.pathname.includes('form.html')) {
         setupLoginPage();
-    } else if (window.location.pathname.includes('home.html')) {
+    } else if (window.location.pathname.includes('../index.html')) {
         setupHomePage();
     }
     

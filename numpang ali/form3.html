@@ -17,8 +17,8 @@
     <div class="step">STEP 1 OF 3</div>
     <div class="title">Account Created</div>
     <div class="desc">Use this email to access your account:</div>
-    <div class="email">yusufregan06@gmail.com</div>
-    <button class="next-btn">Next</button>
+    <div class="email" id="emailDisplay">Your email</div>
+<button class="next-btn" onclick="location.href='form4.html'">Next</button>
   </div>
 
   <footer>
@@ -40,5 +40,9 @@
       </div>
     </div>
   </footer>
+  <script>
+  const email = localStorage.getItem('email');
+  document.getElementById('emailDisplay').textContent = email || 'No email found';
+</script>
 </body>
 </html>
