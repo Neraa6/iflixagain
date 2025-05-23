@@ -169,7 +169,7 @@ window.logout = function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.pathname.includes('../numpang ali/form1.html')) {
+    if (window.location.pathname.includes('../numpang ali/form1.html ')) {
         setupRegisterPage();
     } else if (window.location.pathname.includes('form.html')) {
         setupLoginPage();
