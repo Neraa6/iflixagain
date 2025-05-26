@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #fff;
     color: #333;
   }
@@ -14,14 +14,28 @@ body {
   }
   
   header img {
-    height: 40px;
+    height: 30px;
   }
-  
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #e50914;
+    text-decoration: none;  
+  }
+  .sign-out {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
   .form-container {
     max-width: 400px;
     width: 90%;
     margin: 120px auto;
-    padding: 20px;
+    padding: 55px;
   }
   
   h2 {

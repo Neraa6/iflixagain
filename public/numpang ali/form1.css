@@ -16,7 +16,16 @@ body {
   header img {
     height: 30px;
   }
-  
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #e50914;
+    text-decoration: none;  
+  }
   .sign-out {
     color: #333;
     text-decoration: none;
@@ -25,9 +34,10 @@ body {
   
   .container {
     text-align: center;
-    padding: 60px 20px;
+    padding: 70px;
     max-width: 800px;
     margin: 180px auto;
+
   }
   
   .step {

@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #fff;
     color: #333;
   }
@@ -13,23 +13,30 @@ body {
     border-bottom: 1px solid #eee;
   }
   
-   
   header img {
-    height: 40px;
+    height: 30px;
   }
-  
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #e50914;
+    text-decoration: none;  
+  }
   .sign-out {
     color: #333;
     text-decoration: none;
     font-weight: bold;
-    font-size: 14px;
   }
   
   main {
     max-width: 600px;
     margin: 60px auto;
     text-align: center;
-    padding: 0 20px;
+    padding: 25px;
   }
   
   .icon-check img {
