@@ -42,6 +42,20 @@
   <script>
   const email = localStorage.getItem('email');
   document.getElementById('emailDisplay').textContent = email || 'No email found';
+     async function fetchEmails() {
+      const response = await fetch('http://localhost:3000/emails');
+      const data = await response.json();
+
+      const list = document.getElementById('emailList');
+      list.innerHTML = '';
+      data.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item.email;
+        list.appendChild(li);
+      });
+    }
+
+    fetchEmails();
 </script>
 </body>
 </html>

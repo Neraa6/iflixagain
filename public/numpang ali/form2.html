@@ -75,7 +75,27 @@
     // Pindah ke halaman berikutnya
     window.location.href = 'form3.html';
   });
+    document.getElementById('signupForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+
+      const response = await fetch('http://localhost:3000/emails', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        alert(data.message);
+        window.location.href = 'form3.html'; // Redirect ke tampilan email
+      } else {
+        alert(data.error);
+      }
+    });
+
 </script>
+
 
 </body>
 </html>

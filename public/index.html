@@ -48,12 +48,14 @@
       <form class="w-full max-w-xl flex flex-col sm:flex-row gap-4 justify-center" onsubmit="event.preventDefault()">
         <input
           type="email"
+                 id="emailInput"
           placeholder="Email address"
           required
           class="flex-grow px-4 py-3 rounded text-black text-lg focus:outline-none"
           aria-label="Email address"
         />
         <button
+        id="getStartedBtn"
           type="submit"
           class="bg-red-600 hover:bg-red-700 transition-colors px-6 py-3 rounded text-lg font-semibold"
           onclick="location.href='./numpang ali/form1.html'"
@@ -215,6 +217,40 @@
       </p>
     </div>
   </footer>
+
+  <script>
+   // public/script.js
+document.getElementById('getStartedBtn').addEventListener('click', async function (e) {
+  e.preventDefault(); // mencegah redirect langsung
+
+  const email = document.getElementById('emailInput').value.trim();
+
+  if (!email || !email.endsWith('@gmail.com')) {
+    alert('Masukkan email Gmail yang valid!');
+    return;
+  }
+
+  try {
+    const response = await fetch('http://localhost:3000/emails', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
+    });
+
+    if (response.ok) {
+      // Redirect ke form1.html setelah berhasil
+      window.location.href = './numpang ali/form1.html';
+    } else {
+      const err = await response.json();
+      alert('Gagal menyimpan email: ' + err.error);
+    }
+  } catch (err) {
+    alert('Terjadi kesalahan koneksi ke server');
+    console.error(err);
+  }
+});
+
+  </script>
 
 </body>
 </html>
