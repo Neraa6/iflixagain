@@ -58,7 +58,7 @@
         id="getStartedBtn"
           type="submit"
           class="bg-red-600 hover:bg-red-700 transition-colors px-6 py-3 rounded text-lg font-semibold"
-          onclick="location.href='./numpang ali/form1.html'"
+      
         >
           Get Started
         </button>
@@ -228,7 +228,7 @@ document.getElementById('getStartedBtn').addEventListener('click', async functio
   if (!email || !email.endsWith('@gmail.com')) {
     alert('Masukkan email Gmail yang valid!');
     return;
-  }
+}
 
   try {
     const response = await fetch('http://localhost:3000/emails', {

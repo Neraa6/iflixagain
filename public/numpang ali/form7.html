@@ -5,36 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IFlix - Watch TV Shows Online, Watch Movies Online</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-    }
+    
+   header {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  header img {
+    height: 30px;
+  }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      border-bottom: 1px solid #e6e6e6;
-    }
+  .logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #e50914;
+    text-decoration: none;  
+  }
 
-    header img {
-      height: 40px;
-    }
-
-    header a {
-      text-decoration: none;
-      color: #0071eb;
-      font-size: 14px;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
 
     .step {
       color: #333;
@@ -113,24 +106,118 @@
       margin-top: 10px;
     }
 
-    footer {
-      padding: 20px;
-      background-color: #f7f7f7;
-      text-align: center;
-      font-size: 12px;
-    }
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  header {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  header img {
+    height: 30px;
+  }
 
-    footer a {
-      margin: 0 10px;
-      color: #0071eb;
-      text-decoration: none;
-    }
+  .logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #e50914;
+    text-decoration: none;  
+  }
+  .sign-out {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 70px;
+    max-width: 800px;
+    margin: 180px auto;
+
+  }
+  
+  .step {
+    font-size: 13px;
+    color: gray;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .desc {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .next-btn {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .devices-img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    background-color: #f3f3f3;
+    padding: 40px 50px;
+    font-size: 13px;
+    color: #555;
+  }
+  
+  .footer-content {
+    max-width: 900px;
+    margin: auto;
+    text-align: justify;
+  }
+  
+  .footer-call {
+    margin-bottom: 20px;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .language-select select {
+    padding: 7px;
+    font-size: 14px;
+  }
+  
+  
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo">
-    <a href="#">Sign Out</a>
+ <header>
+    <a href="../index.html" class="logo">iFlix</a>
+    <a href="../index.html" class="sign-out">Sign Out</a>
   </header>
 
   <div class="container">
@@ -161,19 +248,26 @@
       <input type="checkbox"> I agree.
     </label>
 
-    <button class="start-button">Start Membership</button>
+    <button class="start-button" onclick="location.href='../dashboard.html'">Start Membership</button>
 
     <div class="note">You’ll be sent to GoPay to complete payment.</div>
   </div>
-
-  <footer>
-    Questions? Call 007-803-321-8275 (Toll-Free)<br>
-    <a href="#">FAQ</a>
-    <a href="#">Help Center</a>
-    <a href="#">Terms of Use</a>
-    <a href="#">Privacy</a>
-    <a href="#">Cookie Preferences</a>
-    <a href="#">Corporate Information</a>
+ <footer>
+    <p>Questions? Call 007-803-321-8275</p>
+    <div class="footer-links">
+      <span>FAQ</span>
+      <span>Help Center</span>
+      <span>Terms of Use</span>
+      <span>Privacy</span>
+      <span>Cookie Preferences</span>
+      <span>Corporate Information</span>
+    </div>
+    <div class="language-select">
+      <select>
+        <option>English</option>
+        <option>Bahasa Indonesia</option>
+      </select>
+    </div>
   </footer>
 </body>
 </html>
