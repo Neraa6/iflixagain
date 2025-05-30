@@ -1,31 +1,12 @@
 {
   "emails": [
     {
-      "email": "yusufregan06@gmail.com"
+      "email": "yusufregan06@gmail.com",
+      "password": "eruochan"
     },
     {
-      "email": "yusufregan06@gmail.com"
-    },
-    {
-      "email": "yusufregan06@gmail.com"
-    },
-    {
-      "email": "yusufreganmgsmktibazma@gmail.com"
-    },
-    {
-      "email": "test@gmail.com"
-    },
-    {
-      "email": "yusufregan06@gmail.com"
-    },
-    {
-      "email": "mufiz@gmail.com"
-    },
-    {
-      "email": "yusufregan06@gmail.com"
-    },
-    {
-      "email": "yusufregan06@gmail.com"
+      "email": "yusufreganmgsmktibazma@gmail.com",
+      "password": "eruochan"
     }
   ]
 }

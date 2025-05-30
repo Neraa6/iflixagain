@@ -53,46 +53,43 @@
 
 
 <script>
-  const form = document.getElementById('signupForm');
-  const email = document.getElementById('email');
-  const password = document.getElementById('password');
-  const emailError = document.getElementById('emailError');
+   document.getElementById('signupForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // cegah reload
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const emailError = document.getElementById('emailError');
 
-    if (!email.value) {
+    if (!email || !password) {
+      emailError.textContent = 'Email dan password harus diisi.';
       emailError.style.display = 'block';
       return;
-    } else {
-      emailError.style.display = 'none';
     }
 
-    // Simpan email ke localStorage
-    localStorage.setItem('email', email.value);
-    localStorage.setItem('password', password.value);
+    emailError.style.display = 'none';
 
-    // Pindah ke halaman berikutnya
-    window.location.href = 'form3.html';
-  });
-    document.getElementById('signupForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const email = document.getElementById('email').value;
-
+    try {
       const response = await fetch('http://localhost:3000/emails', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
+        body: JSON.stringify({ email, password })
       });
 
       const data = await response.json();
+
       if (response.ok) {
         alert(data.message);
-        window.location.href = 'form3.html'; // Redirect ke tampilan email
+        localStorage.setItem('email', email);
+        localStorage.setItem('password', password);
+        window.location.href = 'form3.html';
       } else {
         alert(data.error);
       }
-    });
+    } catch (err) {
+      console.error(err);
+      alert('Terjadi kesalahan saat menyimpan data.');
+    }
+  });
 
 </script>
 

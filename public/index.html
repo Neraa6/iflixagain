@@ -228,7 +228,7 @@ document.getElementById('getStartedBtn').addEventListener('click', async functio
   if (!email || !email.endsWith('@gmail.com')) {
     alert('Masukkan email Gmail yang valid!');
     return;
-}
+  }
 
   try {
     const response = await fetch('http://localhost:3000/emails', {
@@ -238,7 +238,10 @@ document.getElementById('getStartedBtn').addEventListener('click', async functio
     });
 
     if (response.ok) {
-      // Redirect ke form1.html setelah berhasil
+      // SIMPAN email ke localStorage
+      localStorage.setItem('email', email);
+      
+      // Redirect ke form1.html
       window.location.href = './numpang ali/form1.html';
     } else {
       const err = await response.json();
@@ -249,6 +252,8 @@ document.getElementById('getStartedBtn').addEventListener('click', async functio
     console.error(err);
   }
 });
+ 
+
 
   </script>
 
