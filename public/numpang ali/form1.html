@@ -42,5 +42,23 @@
 
 </body>
 </html>
-<script src="index.js"></script>
+<script>
+  
+    function nextStep() {
+      // Cek data terakhir
+      const users = JSON.parse(localStorage.getItem("iflix_users") || "[]");
+      if (users.length === 0) {
+        alert("No user data found. Please go back to homepage.");
+        window.location.href = "index.html";
+        return;
+      }
+
+      // Simpan bahwa sudah masuk step 1
+      localStorage.setItem("iflix_step", "1");
+
+      // Redirect ke step 2 (form2.html misalnya)
+      window.location.href = "form2.html";
+    }
+
+</script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

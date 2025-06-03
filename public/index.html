@@ -58,6 +58,7 @@
         id="getStartedBtn"
           type="submit"
           class="bg-red-600 hover:bg-red-700 transition-colors px-6 py-3 rounded text-lg font-semibold"
+        onclick="submitEmail()"
       
         >
           Get Started
@@ -170,6 +171,7 @@
       <button
         type="submit"
         class="bg-red-600 hover:bg-red-700 transition-colors px-6 py-3 rounded text-lg font-semibold"
+      onclick="submitEmail()"
       >
         Get Started
       </button>
@@ -219,43 +221,25 @@
   </footer>
 
   <script>
-   // public/script.js
-document.getElementById('getStartedBtn').addEventListener('click', async function (e) {
-  e.preventDefault(); // mencegah redirect langsung
+       function submitEmail() {
+      const email = document.getElementById("emailInput").value.trim();
+      if (!email.includes("@gmail.com")) {
+        alert("Please enter a valid Gmail address.");
+        return;
+      }
 
-  const email = document.getElementById('emailInput').value.trim();
+      // Simpan ke LocalStorage (Create)
+      let users = JSON.parse(localStorage.getItem("iflix_users") || "[]");
+      users.push({ email: email });
+      localStorage.setItem("iflix_users", JSON.stringify(users));
 
-  if (!email || !email.endsWith('@gmail.com')) {
-    alert('Masukkan email Gmail yang valid!');
-    return;
-  }
-
-  try {
-    const response = await fetch('http://localhost:3000/emails', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email }),
-    });
-
-    if (response.ok) {
-      // SIMPAN email ke localStorage
-      localStorage.setItem('email', email);
-      
-      // Redirect ke form1.html
-      window.location.href = './numpang ali/form1.html';
-    } else {
-      const err = await response.json();
-      alert('Gagal menyimpan email: ' + err.error);
+      // Redirect ke halaman berikutnya
+      window.location.href = "./numpang ali/form1.html";
     }
-  } catch (err) {
-    alert('Terjadi kesalahan koneksi ke server');
-    console.error(err);
-  }
-});
- 
-
 
   </script>
+
+
 
 </body>
 </html>

@@ -53,46 +53,25 @@
 
 
 <script>
-   document.getElementById('signupForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
+document.getElementById('registerForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
 
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const emailError = document.getElementById('emailError');
-
-    if (!email || !password) {
-      emailError.textContent = 'Email dan password harus diisi.';
-      emailError.style.display = 'block';
-      return;
-    }
-
-    emailError.style.display = 'none';
-
-    try {
-      const response = await fetch('http://localhost:3000/emails', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password })
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        alert(data.message);
-        localStorage.setItem('email', email);
-        localStorage.setItem('password', password);
-        window.location.href = 'form3.html';
-      } else {
-        alert(data.error);
-      }
-    } catch (err) {
-      console.error(err);
-      alert('Terjadi kesalahan saat menyimpan data.');
-    }
+  // Simpan ke backend
+  await fetch('https://NAMA-API-KAMU.up.railway.app/users', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password })
   });
 
-</script>
+  // Simpan email di localStorage biar bisa dibaca di halaman berikutnya
+  localStorage.setItem('registeredEmail', email);
 
+  // Redirect ke halaman berikutnya
+  window.location.href = 'form3.html';
+});
+</script>
 
 </body>
 </html>
